@@ -5,42 +5,39 @@
     <title>Meadowood Gardens - Data Tracker</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <div class="card text-center" style="width: 95%; max-width: 100%; margin-left: 2.5%; margin-top: 5vh; background-color:red">
-        <div class="card-header">
-            Meadowood Gardens - Data Tracker
+<body style="background-color: #1B4636">
+    <div class="card text-center" style="width: 95vw; max-width: 100vw; margin-left: 2.5vw; margin-top: 2.5vh;">
+        <div class="card-header" style="background-color: #3B5249">
+            <a style="font-size: 50px; color: #DDDDDD">Meadowood Gardens - Data Tracker</a>
         </div>
-        <div class="card-body" style="height: 80vh;">
-            <form>
-              <fieldset >
-                <legend>Client Fertilizer Treatments</legend>
+        <div class="card-body" style="height: 87vh; background-color: #1B262C">
+            <form action="/Database/submit" method="POST">
+              <fieldset>
+                <legend style="font-size: 50px; color: #DDDDDD; margin-bottom: 50px;">Client Fertilizer Treatments</legend>
                   <div class="mb-3">
-                  <label for="clients" class="form-label">Select a client</label>
-                  <select id="clients" class="form-select">
+                  <label for="clients" class="form-label" style="font-size: 40px; color: #DDDDDD">Select a client</label>
+                  <select id="clients" name="client" class="form-select rounded-pill" style="height: 170px; font-size: 70px; text-align: center; text-align-last:center; padding-right: 29px; direction: rtl; background-color: #1B262C; color: #DDDDDD" multiple>
                   </select>
                 </div>
-                  <div class="row" style="width: 90%; max-width: 100%; margin-left: 5%; margin-bottom: 50px;">
-                      <div class="form-check col">
-                      <input type="checkbox" class="btn-check" id="App" autocomplete="off">
-                        <label class="btn btn-primary" for="App" style="width: 100%; max-width: 100%;">Fertilizer Application</label>
-                    </div>
-                    <div class="form-check col">
-                      <input type="checkbox" class="btn-check" id="Grub" checked="" autocomplete="off">
-                        <label class="btn btn-primary" for="Grub" style="width: 100%; max-width: 100%;">Grub</label>
-                    </div>
-                      <div class="form-check col">
-                      <input type="checkbox" class="btn-check" id="BL" checked="" autocomplete="off">
-                        <label class="btn btn-primary" for="BL" style="width: 100%; max-width: 100%">Broad Leaf</label>
-                    </div>
+                  <label class="form-label" style="font-size: 40px; color: #DDDDDD; margin-top: 35px;">Select a service(s)</label>
+                  <div class="form-check row" style="margin-bottom: 20px; width: 100%; max-width: 100%;">
+                      <input type="checkbox" class="btn-check" name="App" id="App" checked autocomplete="off">
+                      <label class="btn btn-outline-primary rounded-pill" for="App" style="height: 170px; font-size: 70px; color: #DDDDDD; padding-top: 35px;">Fertilizer Application</label>
                   </div>
-
-
-                <button type="submit" class="btn btn-primary btn-lg" style="width: 75%; height: 70px;">Submit</button>
+                  <div class="form-check row" style="margin-bottom: 20px; width: 100%; max-width: 100%;">
+                      <input type="checkbox" class="btn-check" name="Grub" id="Grub" autocomplete="off">
+                      <label class="btn btn-outline-primary rounded-pill" for="Grub" style="height: 170px; font-size: 70px; color: #DDDDDD; padding-top: 35px;">Grub</label>
+                  </div>
+                  <div class="form-check row" style="margin-bottom: 125px; width: 100%; max-width: 100%;">
+                      <input type="checkbox" class="btn-check" id="BL" name="BL" autocomplete="off">
+                      <label class="btn btn-outline-primary rounded-pill" for="BL" style="height: 170px; font-size: 70px; color: #DDDDDD; padding-top: 35px;">Broad Leaf</label>
+                  </div>
+                <button type="submit" class="btn btn-lg rounded-pill" style="width: 75%; height: 150px; margin-left: 2.5%; background-color: #719FB0; color: #DDDDDD; font-size: 50px;">Submit</button>
               </fieldset>
             </form>
         </div>
-        <div class="card-footer text-body-secondary">
-            Created and managed by calebjschmitt.com
+        <div class="card-footer text-body-secondary" style="font-size: 20px; background-color: #222831;">
+            <a style="color: #DDDDDD">Created and managed by calebjschmitt.com</a>
         </div>
     </div>
 
@@ -56,6 +53,5 @@
             }
         });
     </script>
-
 </body>
 </html>
